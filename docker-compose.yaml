@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  sftp:
+    image: atmoz/sftp
+    volumes:
+        - ${FILES_PATH}:/home/admin/files
+    ports:
+        - ${SFTP_PORT}:22
+    command: ${SFTP_USER}:${SFTP_PASSWORD}:1001
