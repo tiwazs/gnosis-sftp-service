@@ -2,8 +2,13 @@ version: '3.3'
 services:
   sftp:
     image: atmoz/sftp
+    container_name: gnosis_sftp_service
+    restart: always
     volumes:
         - ${FILES_PATH}:/home/admin/files
+        - sftp-key:/etc/ssh
     ports:
         - ${SFTP_PORT}:22
     command: ${SFTP_USER}:${SFTP_PASSWORD}:1001
+volumes:
+  sftp-key:
