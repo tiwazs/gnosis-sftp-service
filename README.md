@@ -6,8 +6,6 @@ This repository is used to simply set the environment variables and use the dock
 For more information about the face recognition application refer to : [gnosis_main_service](https://github.com/damsog/gnosis-main-service)
 
 ## :clipboard: Requirements
-The nodejs dependencies can be installed simply by using ```npm ci```.
-
 ##### :penguin: Dependencies
 - [Docker](https://docs.docker.com/engine/install/ubuntu/)
 
@@ -18,7 +16,7 @@ Before deploying the service you have to set up the environment variables. creat
 cp .base.env .env
 ```
 Let's explain the parameters to set on the .env file. <br>
-Set the path to serve through the SFTP protocol (where to save the files). and set the access cretentials to access the service and the port tor run
+Set the path to serve through the SFTP protocol (where to save the files). Then set the access cretentials for the service and the port tor run on.
 ```
 FILES_PATH=<path>
 SFTP_USER=<user>
